@@ -1,0 +1,8 @@
+[2020-03-16 16:15:25] INFO Disk size is 100 Gb
+[2020-03-16 16:15:25] ERROR Db failute
+[2020-03-16 16:15:25] ERROR Network failute
+[2020-03-16 16:16:29] ERROR Cant write varlog
+[2020-03-16 16:16:42] ERROR Unable to start process
+[2020-03-16 16:16:43] WARNING Disk size is too small
+[2020-03-16 16:16:43] ERROR Config not found
+[2020-03-16 16:16:53] ERROR Timeout detected

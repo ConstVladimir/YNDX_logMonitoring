@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="googlecode.json.simple" type="repository">
+    <properties maven-id="com.googlecode.json-simple:json-simple:1.1.1">
+      <exclude>
+        <dependency maven-id="com.googlecode.json-simple:json-simple" />
+        <dependency maven-id="junit:junit" />
+        <dependency maven-id="org.hamcrest:hamcrest-core" />
+      </exclude>
+    </properties>
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
