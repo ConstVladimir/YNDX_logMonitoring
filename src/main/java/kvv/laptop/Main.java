@@ -29,6 +29,7 @@ public class Main {
 
         int msec = 60 * 1000;
         int N = 3;
+        String needDT ="";
 
         Path currentRelativePath = Paths.get("");
         String inF = currentRelativePath.toAbsolutePath() + rscPath + inputFile;
@@ -47,12 +48,13 @@ public class Main {
                 {
                     String dt = nowStr.substring(1,20);
                     LocalDateTime ldt = LocalDateTime.parse(dt, dtf);
-                    ZonedDateTime zdt = ldt.atZone(ZoneId.of("Europe/Moscow"));
+                    ZonedDateTime zdt = ldt.atZone(ZoneId.of("UTC"));
                     Long tme = zdt.toInstant().toEpochMilli();
                     errTimes.addLast(tme);
                     if (errTimes.size() == N){
                         if (errTimes.getLast()-errTimes.getFirst()<msec){
-                            System.out.println(new Date(tme));
+                            needDT = dt;
+                            System.out.println(needDT);
                             break;
                         }
                         else {
@@ -68,7 +70,7 @@ public class Main {
         }
 
         try (FileWriter file = new FileWriter(outF)) {
-            file.write("end");
+            file.write(needDT);
         } catch (IOException e) {
             e.printStackTrace();
         }
